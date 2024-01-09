@@ -1,9 +1,9 @@
-const removeFromArray = function(array, arg) {
-  let newArray = [];
-  
-  for(let i = 0; i < array.length; i++) {
-    if (array[i] != arg) {
-      newArray.push(array[i]);
+const removeFromArray = function (array, ...args) {
+  let newArray = array;
+
+  for (let arg of args) {
+    if (newArray.includes(arg)) {
+      newArray.splice(newArray.indexOf(arg),1)
     }
   }
 
