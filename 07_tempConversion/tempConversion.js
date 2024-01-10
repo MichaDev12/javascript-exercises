@@ -12,7 +12,18 @@ const convertToCelsius = function(num) {
   return result;
 };
 
-const convertToFahrenheit = function() {
+const convertToFahrenheit = function(num) {
+  let result;
+
+  const C_TO_F = (num * 9/5) + 32;
+
+  if (!Number.isInteger(C_TO_F)) {
+    result = Number(C_TO_F.toFixed(1));
+  } else {
+    result = C_TO_F;
+  }
+
+  return result;
 };
 
 // Do not edit below this line
